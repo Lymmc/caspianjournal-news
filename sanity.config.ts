@@ -8,7 +8,7 @@ export default defineConfig({
   title: "CaspianJournal Studio",
   projectId: "ap6a0ezp",
   dataset: "production",
-  plugins: [deskTool(), visionTool()],
+  tools: [deskTool(), visionTool()],  // ← plugins yerine tools
   schema: {
     types: schemaTypes,
   },
