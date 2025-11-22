@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  reactCompiler: false,
+  rewrites: async () => [
+    {
+      source: '/studio/:path*',
+      destination: '/studio/[[...index]]/page',
+    },
+  ],
 };
 
 export default nextConfig;
